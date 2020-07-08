@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // isNaN()这个方法用来判断非数字，并且返回一个值 如果是数字返回的是false，如果不是数字返回的是true
+        console.log(isNaN(12));
+        console.log(isNaN("curry"));
+         // 检测获取字符串的长度length
+         var str = 'my name is curry_coder';
+         console.log(str.length);
+        // 字符串的拼接 +  只有有字符串和其他类型想拼接，最终的结果就是字符串
+        console.log('沙漠' + '骆驼' + 666);  // '沙漠骆驼666'
+        console.log('curry' + 18);  // 'curry18'
+        console.log('curry' + true); // 'currytrue'
+        //  布尔类型boolean
+        var flag = true;
+        var _flag = false;
+        console.log(flag + 1);  // ture参与加法运算当1来看
+        console.log(_flag + 1);  // false参与加法运算当0来看
+        // 如果一个变量声明未赋值就是undefined 未定义类型
+        var str;
+        console.log(str)
+        var variable = undefined;
+        console.log(variable + 'curry'); // 'undefinedcurry'
+        console.log(variable +1)  // undefined和数字相加，最后的结果是NaN
+         // null（空值）
+         var space = null;
+        console.log(space + 'curry');  // 'nullcurry'
+        console.log(space + 1);  // 1
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
