@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // 函数实现累加
+      function getSum(num1, num2){
+          var sum = 0
+          for(var i=num1; i<=num2; i++){
+              sum += i
+          }
+          console.log(sum)
+      }
+       
+      // 调用
+      getSum(6, 4)
+
+      //函数的返回值
+      function reValue(){
+        return "fans";
+      }
+
+      console.log(reValue());
+
+      // arguments 的使用
+      function fun2(){
+          console.log(arguments);
+          console.log(arguments.length);
+          console.log(arguments[1]);
+          
+
+        }
+
+      fun2(123)
+
+    </script>
+</body>
+</html>

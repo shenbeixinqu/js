@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 利用new创建数组
+        var names = new Array();
+        // 利用字面量创建数组
+        var arr = []
+        var arrays = ['1', 2, "迪丽热巴", true]
+        console.log(arrays);
+        console.log(arrays[2]);
+
+        //遍历数组
+        for(let i=0; i<arrays.length; i++){
+            console.log(arrays[i]);   
+        }
+        // 数组转换为分割字符串
+        var arr5 = ['red', 'green', 'blue', 'pink'];
+        var str = "";
+        var seq = "!";
+        for (var i=0; i<arr5.length; i++){
+            str += arr5[i]+seq
+        }
+        console.log(str);
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
