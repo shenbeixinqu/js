@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2020-07-10</div>
+    <ul>
+        <li>知否知否应是绿肥红瘦</li>
+        <li>知否知否应是绿肥红瘦</li>
+        <li>知否知否应是绿肥红瘦</li>
+        <li>知否知否应是绿肥红瘦</li>
+        <li>知否知否应是绿肥红瘦</li>
+    </ul>
+    <ul id="nav">
+        <li>库里</li>
+        <li>库里</li>
+        <li>库里</li>
+        <li>库里</li>
+        <li>库里</li>
+    </ul>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="navs">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+        // 根据ID获取元素
+        var timer = document.getElementById("time")
+        console.log(timer);
+        console.log(typeof timer)
+        console.dir(timer)  // 打印返回的元素对象
+
+        // 根据标签名获取
+        var lis = document.getElementsByTagName("li")
+        console.log(lis)
+        console.log(lis[0]);
+
+        // 根据类名获取元素
+        var boxs = document.getElementsByClassName("box")
+        console.log(boxs[0])
+
+        // 根据新增的方法获取元素
+            // 返回指定选择器的第一个元素对象
+        var firstbox = document.querySelector(".box")
+        console.log(firstbox)  
+        var li = document.querySelector("li")
+        console.log(li)    
+            //  返回指定选择器的所有对象
+        const box = document.querySelectorAll(".box")
+        console.log(box)
+
+        // 根据特殊元素获取元素
+        // 获取body元素
+        var body = document.body;
+        console.log(body);
+        console.dir(body);
+        // 获取html元素
+        var html = document.documentElement;
+        console.log(html);
+        console.dir(html);
+        
+
+    </script>
+</body>
+</html>

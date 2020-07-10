@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.利用对象字面量创建对象
+        var obj = {}; //创建一个空对象
+        var player = {
+            name: "curry",
+            age: "32",
+            gender: "male",
+            sayHi: function(){
+                console.log('Hi Curry');
+            }
+        }
+        // 使用对象的属性
+        console.log(player.name);
+        console.log(player["age"]);
+        // 使用对象的方法
+        player.sayHi()
+        
+        // 2 利用new onject创建对象
+        var zsf = new Object();
+        zsf.name = "库里";
+        zsf.age = "32";
+        zsf.sex = "man";
+        zsf.sayhi = function(){
+            console.log('Hello Curry');
+        }
+        
+        // 构造函数一次创建多个对象
+        function Star(name, age, sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.song = function(music){
+                console.log("四大天王构造函数中的方法");
+                console.log(this.name + '是四大天王之一, 他的年龄是' + this.age + '岁, 他演唱了歌曲《' + music + '》');
+            }
+        }
+        // 调用构造函数
+        var ldh = new Star("刘德华", 55, '男')
+        console.log(ldh.name);
+        ldh.song("冰雨")
+        
+        
+        
+    </script>
+</body>
+</html>
