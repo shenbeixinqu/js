@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color:pink;
+            margin: 100px auto;
+        }
+        /* 鼠标点击后，新增的样式 */
+        .change {
+            background-color:purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">文本</div>
+    <script>
+        var test = document.querySelector(".first")
+        test.onclick = function(){
+            // 让当前类名改成change
+            // 通过修改元素的classname 更改元素的样式
+            this.className = "change"
+        }
+    </script>
+    
+</body>
+</html>
