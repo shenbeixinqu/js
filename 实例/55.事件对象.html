@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <script>
+        // 事件对象
+        const div = document.querySelector('div')
+        div.onclick = function(e){
+            console.log(e);
+        }
+    </script>
+
+    // event就是一个事件对象,写到监听函数的小括号中,当形参看
+    // 事件对象只有有实践才会存在,系统自动创建的
+    // 事件对象是我们事件的一系列相关数据的集合，根事件相关的，比如鼠标点击里面就包含了鼠标的相关信息，如鼠标坐标等信息。如果是键盘事件里面就包含了键盘事件的信息，如判断用户按下了哪个键
+    // 这个事件对象我们可以自己命名，如event、evt、e
+    // 事件对象也有兼容性问题，ie8以下浏览器通过window.event
+</body>
+</html>

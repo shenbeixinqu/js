@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <ol>
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+        <li>我是li5</li>
+    </ol>
+    <div class="demo">
+        <div class="box">
+            <span class="erweima"></span>
+        </div>
+    </div>
+    <ul class="test">
+        <li>123</li>
+    </ul>
+    <script>
+        var box = document.querySelector(".box")
+        console.dir(box)
+        // parentNode 父节点
+        var erweima = document.querySelector(".erweima")
+        // 得到的是离元素最近的父级节点(亲爸爸)，如果找不到父节点就返回为空null.
+        console.log(erweima.parentNode);
+        var ul = document.querySelector("ul")
+        var lis = document.querySelectorAll("li")
+        // 2.子节点childNodes所有的子节点包含元素节点、文本节点等
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[0])
+        console.log(ul.childNodes[1].nodeType)
+         // children获取所有的子元素节点，也是实际开发中常用的
+        console.log(ul.children);
+
+        var ol = document.querySelector("ol")
+        // firstChild返回的第一个子节点，不管是文本节点还是元素节点
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+        // firstElementChild 返回第一个子元素节点
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+
+        console.log(ol.children);
+        console.log(ol.children[0]);
+
+        var div = document.querySelector("div")
+        // nextSibling下一个兄弟节点，包含元素节点或文本节点等
+        console.log(div.nextSibling);
+
+         // previousSibling上一个兄弟节点，包含元素节点或文本节点等
+        var span = document.querySelector('span');
+        console.log(span.previousSibling);
+
+        // nextElementSibling下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        // previousElementSibling上一个兄弟元素节点
+        console.log(span.previousElementSibling);
+
+        // 1.创建元素节点
+        var li = document.createElement("li")
+        // 2.添加节点node.appendChild(child)  node父级 child子级 后面追加元素
+        var ul = document.querySelector(".test")
+        ul.appendChild(li)
+        // 3.添加节点node.insertBefor(child,指定元素);
+        var lili = document.createElement('li');
+        ul.insertBefore(lili, ul.children[0]);
+        // 4.我们想要页面中添加一个新的元素：a.创建元素 b.添加元素
+
+
+    </script>
+</body>
+</html>

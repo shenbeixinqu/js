@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 鼠标事件对象 MouseEvent
+        document.addEventListener('click', function(e){
+            console.log(e);
+             // 1.client返回鼠标在可视区域的x和y坐标
+            console.log(e.clientX);
+            console.log(e.clientY);
+             // 2.page返回鼠标在页面文档的x和y坐标(重点)
+            console.log(e.pageX);
+            console.log(e.pageY);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <script>
+        // 传统方式
+        var btns = document.querySelectorAll("button")
+        btns[0].onclick = function(){
+            alert("Hi~");
+        }
+
+        // 事件监听方式注册事件
+        btns[1].addEventListener('click',function(){
+            alert("123456")
+        }) 
+
+    </script>
+</body>
+</html>
