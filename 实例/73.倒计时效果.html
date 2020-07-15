@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div {
+            margin: 200px;
+        }
+
+        p {
+            float: left;
+        }
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class=".jd">距离下班还有：</p>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        // 获取元素
+        var hour = document.querySelector(".hour");
+        var minute = document.querySelector(".minute");
+        var secord = document.querySelector(".second");
+        var userInputtime = +new Date('2020-7-15 18:00:00');
+        countDown();
+        // 开启定时器
+        setInterval(countDown, 1000);
+        function countDown(){
+            var nowTime = +new Date();  // 返回的是当前时间的总毫秒数
+            var res = (userInputtime - nowTime) / 1000;
+            
+            var h = parseInt(res/ 60 / 60 % 24)
+            h = h < 10 ? '0'+ h : h;
+            hour.innerHTML = h;
+
+            var m = parseInt(res / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            minute.innerHTML = m;
+
+            var s = parseInt(res % 60);
+            s = s < 10 ? '0'+s : s;
+            secord.innerHTML = s
+        }
+    </script>
+</body>
+</html>
