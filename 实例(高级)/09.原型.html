@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 构造函数的问题
+        function Star(uname, age){
+            this.uname = uname;
+            this.age = age;
+        }
+        Star.prototype.sing = function(){
+            console.log("我会唱歌");
+        }
+
+        var ldh = new Star('刘德华',19);
+        var zxy = new Star("张学友", 16);
+
+        console.log(ldh.sing === zxy.sing);
+        ldh.sing();
+        zxy.sing();
+
+        // 一般情况下,公共属性定义到构造函数里面,公共的方法定义到原型里面
+    </script>
+</body>
+</html>
