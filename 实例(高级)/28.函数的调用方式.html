@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数的调用方式
+        // 普通函数
+        function fn(){
+            console.log("reneren");
+        }
+        fn();
+        fn.call();
+
+        // 对象的方法
+        var o = {
+            sayHi:function(){
+                console.log("hello");
+            }
+        }
+        o.sayHi()
+    </script>
+</body>
+</html>
