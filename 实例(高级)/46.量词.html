@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 量词符  *   0次或多次
+        //         +  1次或多次
+        //         ?  0次或1次
+        
+        //{3} 就是重复3次 , {3, }  大于等于3, {3, 16}  大于等于3 并且 小于等于16
+        var reg = /^a{3}$/;
+        console.log(reg.test("aa"));
+        console.log(reg.test("aaa"));  // true
+        console.log(reg.test("aaaa")); 
+
+
+    </script>
+</body>
+</html>
