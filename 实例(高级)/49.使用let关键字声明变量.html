@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            let关键字就是用来声明变量的
+            let声明的变量具有块级作用域
+            防止循环变量变成全局变量
+			使用let关键字声明的变量没有变量提升
+			使用let关键字声明的变量具有暂时性死区特性
+        */
+        /* -------使用let关键字声明的变量具有暂时性死区特性------- */
+        var num = 10
+		if (true) {
+			console.log(num);
+			let num = 20;
+		}
+
+        /* -------防止循环变量变成全局变量--------- */
+            for(let i =0; i<2 ;i++){}
+            console.log(i);
+        /*-----使用let关键字声明的变量没有变量提升------*/
+        console.log(a);
+        let a = 100;
+    </script>
+</body>
+</html>
